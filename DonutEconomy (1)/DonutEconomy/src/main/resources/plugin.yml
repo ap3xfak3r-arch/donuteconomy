@@ -1,0 +1,31 @@
+name: DonutEconomy
+version: '1.0.0'
+main: net.dsmp.economy.DonutEconomy
+api-version: '1.21'
+author: YourName
+description: Donut SMP style economy plugin with /sell, /shop, and /auction
+
+commands:
+  balance:
+    description: Check your balance
+    aliases: [bal, money]
+  pay:
+    description: Pay another player
+    usage: /pay <player> <amount>
+  sell:
+    description: Sell items from your inventory
+    usage: /sell <hand|all>
+  shop:
+    description: Open the shop
+  shopadmin:
+    description: Edit the shop (admin only)
+    permission: donuteconomy.admin
+  auction:
+    description: Open or use the auction house
+    aliases: [ah]
+    usage: /auction [sell <price>]
+
+permissions:
+  donuteconomy.admin:
+    description: Allows editing the shop
+    default: op
